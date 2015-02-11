@@ -30,7 +30,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email should accept the proper format" do
-  	valid_addresses = %w[user@example.com USER@foo..COM A_US-ER@foo.bar.org
+  	valid_addresses = %w[user@example.com A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn]
 	valid_addresses.each do |email|
 		@user.email = email
@@ -40,7 +40,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "email should reject improper format" do
   	invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                           foo@bar_baz.com foo@bar+baz.com]
+                           foo@bar_baz.com foo@bar+baz.com USER@foo..COM]
 	invalid_addresses.each do |email|
 		@user.email = email
 		assert_not @user.valid?, "#{email.inspect} should be invalid"
