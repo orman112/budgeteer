@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+
   #TODO Add Resources Instead of GET Request
   #get 'expense_items/index'
 
   #get 'budget_lists/index'
+
+  ####Generated from Rails Tuts
+  #get 'users/show'
+  get 'signup' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,6 +17,7 @@ Rails.application.routes.draw do
   resources :budget_lists do
     resources :expense_items
   end
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
