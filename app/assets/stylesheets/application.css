@@ -36,4 +36,10 @@ table { width: 90% }
 footer { min-height: 50px; background-color: #1d407b; }
 
 /* MAIN STYLES */
-#content { width: 1024px; margin: 0 auto; position: relative; padding: 25px 0; }
+#content { width: 1024px; margin: 0 auto; position: relative; padding: 25px; }
+
+
+/* RESPONSIVE STYLES */
+@media (max-width:1024px) {
+    #header, #content, #footer-container {width: initial}
+}
