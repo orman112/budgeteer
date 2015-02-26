@@ -1,0 +1,13 @@
+<header>
+	<ul>
+		<li><%= link_to("Home", root_path) %></li>
+		<% if logged_in? %>
+			<li><%= link_to("Users", '#') %></li>
+			<li><%= link_to("Settings", "#") %></li>
+			<li><%= link_to("Log Out", logout_path, method: :delete) %></li>
+			<li><%= link_to("Profile") %></li>
+		<% else %>
+			<li>Sorry!</li>
+		<% end %>
+	</ul>
+</header>
